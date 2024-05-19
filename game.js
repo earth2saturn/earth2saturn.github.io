@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const storyElement = document.getElementById('story');
     const choicesElement = document.getElementById('choices');
 
