@@ -202,7 +202,32 @@
                     ]
                 }
             };
+   function displayStory(node) {
+        storyElement.innerText = story[node].text;
+        choicesElement.innerHTML = '';
+        story[node].choices.forEach(choice => {
+            const button = document.createElement('button');
+            button.innerText = choice.text;
+            button.className = 'button';
+            button.addEventListener('click', () => displayStory(choice.next));
+            choicesElement.appendChild(button);
+        });
+    }
 
-            function displayStory(node) {
-                storyElement.innerText = story[node].text;
+    startButton.addEventListener('click', () => {
+        startButton.style.display = 'none';
+        codeInput.style.display = 'block';
+        codeButton.style.display = 'block';
+        displayStory('start');
+    });
+
+    codeButton.addEventListener('click', () => {
+        const enteredCode = codeInput.value;
+        if (enteredCode === secretCode) {
+            alert('Code accepted!');
+        } else {
+            alert('Incorrect code.');
+        }
+    });
+});
                
