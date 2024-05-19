@@ -59,9 +59,9 @@
         <div id="choices"></div>
         <input type="text" id="codeInput" placeholder="Enter code" style="display:none;">
         <button id="codeButton" style="display:none;">Submit Code</button>
-      <button id="startButton" class="button">Start Game</button>
+      <button id="startButton" class="button" onclick="('start')">Start Game</button>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('start'), () => {
             const storyElement = document.getElementById('story');
             const choicesElement = document.getElementById('choices');
             const codeInput = document.getElementById('codeInput');
