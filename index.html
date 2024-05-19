@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Adventure Game: The Chase</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #game {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
+        #story {
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #4facfe;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #00f2fe;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>The Chase</h1>
+        <p id="story"></p>
+        <div id="choices"></div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
