@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const startButton = document.getElementById('startButton');
-
+    const storyElement = document.getElementById('story');
+    const choicesElement = document.getElementById('choices');
+    const startButton = document.getElementById('startButton'); 
     // Event listener for the start button
     startButton.addEventListener('click', () => {
         // Call a function to start the game or navigate to the game page
