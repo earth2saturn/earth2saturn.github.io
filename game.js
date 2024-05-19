@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    function updateStory(node) {
+   function updateStory(node) {
         storyElement.textContent = node.text;
         choicesElement.innerHTML = "";
         node.choices.forEach(choice => {
@@ -170,3 +170,10 @@ document.addEventListener('DOMContentLoaded', () => {
             choicesElement.appendChild(button);
         });
     }
+
+    function startGame() {
+        updateStory(story.start);
+    };
+
+    startButton.addEventListener('click', startGame); // Attach event listener to start button
+});
