@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const startButton = document.getElementById('startButton');
+
+    // Event listener for the start button
+    startButton.addEventListener('click', () => {
+        // Call a function to start the game or navigate to the game page
+        startGame();
+    });
+
+    // Function to start the game
+    function startGame() {
+        // Replace this with your logic to start the game
+        // For example, redirect to the game page or display the game interface
     const storyElement = document.getElementById('story');
     const choicesElement = document.getElementById('choices');
 
@@ -157,5 +169,3 @@ document.addEventListener('DOMContentLoaded', () => {
             choicesElement.appendChild(button);
         });
     }
-
-    updateStory(story.start);
