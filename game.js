@@ -144,23 +144,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    function startGame() {
-        showStory("start");
-    }
-
-    function showStory(storyKey) {
-        const currentStory = story[storyKey];
-        storyElement.innerText = currentStory.text;
+    function updateStory(node) {
+        storyElement.textContent = node.text;
         choicesElement.innerHTML = "";
-
-        currentStory.choices.forEach(choice => {
-            const button = document.createElement("button");
-            button.innerText = choice.text;
-            button.classList.add("button");
-            button.onclick = () => showStory(choice.next);
+        node.choices.forEach(choice => {
+            const button = document.createElement('button');
+            button.textContent = choice.text;
+            button.classList.add('button');
+            button.addEventListener('click', () => {
+                updateStory(story[choice.next]);
+            });
             choicesElement.appendChild(button);
         });
     }
 
-    startGame();
-});
+    updateStory(story.start);
